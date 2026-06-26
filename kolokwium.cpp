@@ -112,11 +112,11 @@ uint32_t** odczytZPliku(const char* nazwaPliku)
 
 		if (feof(plik)) break;
 	}
-	while (tekst != '\0')
+	int x = 0;
+	while (tekst[x] != '\0')
 	{
-		int i = 0;
-		tekst[i] = rozmiar;
-		i++;
+		tekst[x] = rozmiar;
+		x++;
 	}
 
 	uint32_t** odczytanaTablica = alokujDane(rozmiar);
